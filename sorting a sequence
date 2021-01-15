@@ -1,0 +1,16 @@
+def in_sort(seq):
+    for i in range(len(seq)):
+        look_pos=i
+        for j in range(i,len(seq)):
+            if seq[look_pos] < seq[j]:
+                look_pos=j
+            (seq[j],seq[look_pos])=(seq[look_pos],seq[j])
+    return (seq)
+g=[1,2,3,98,56,3]
+print(in_sort(g))
+
+
+
+
+output:
+[1, 2, 3, 3, 56, 98]
